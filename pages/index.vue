@@ -89,7 +89,12 @@
           <v-btn small depressed @click="addWorkspace">ADD WORKSPACE</v-btn>
         </div>
 
-        <p v-if="workspaces.length === 0">You have no workspaces yet.</p>
+        <div
+          v-if="workspaces.length === 0"
+          class="h-screen flex items-center justify-center"
+        >
+          <p class="text-center">You have no workspaces yet.</p>
+        </div>
 
         <v-card
           v-else
@@ -119,10 +124,10 @@
       </div>
 
       <div v-else class="height-[100vw] w-100">
-        <div class="place-content-center">
-          <p>You have to login to see your Workspaces</p>
-          <v-btn small depressed @click="addWorkspace">LOGIN</v-btn>
-          <v-btn small depressed @click="addWorkspace">REGISTER</v-btn>
+        <div class="h-screen flex items-center justify-center">
+          <p class="text-center">
+            You have to register/login to create/see your Workspaces
+          </p>
         </div>
       </div>
 
@@ -215,16 +220,6 @@
     } catch (error) {
       console.log(error);
     }
-  };
-
-  const handleRegistration = async () => {
-    const { registerUser } = firebaseAuth(); // auto-imported from composables
-
-    const creds = reactive({
-      email: "",
-      password: "",
-    });
-    await registerUser(creds.email, creds.password);
   };
 
   const addWorkspace = () => {

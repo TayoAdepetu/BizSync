@@ -23,8 +23,6 @@
   "dependencies": {
     "@mdi/font": "^7.3.67",
     "firebase": "^10.5.2",
-    "nuxt-vuefire": "^0.4.1",
-    "uuid": "^9.0.1",
-    "vuefire": "^3.1.18"
+    "uuid": "^9.0.1"
   }
 }
