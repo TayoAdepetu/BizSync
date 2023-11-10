@@ -316,7 +316,7 @@
     },
   };
 </script>
-<style lang="scss">
+<style scoped>
   .v-dialog {
     border-radius: 15px;
     background-color: var(--white);

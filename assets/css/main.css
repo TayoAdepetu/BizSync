@@ -1,0 +1,8 @@
+/* Import the Tailwind CSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --limegreen: #5fe65f;
+}
